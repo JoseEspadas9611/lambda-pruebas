@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
+    "encoding": "^0.1.13",
     "mongodb": "^3.6.9",
     "mongodb-client-encryption": "^1.2.5",
     "netlify-lambda": "^2.0.3",
