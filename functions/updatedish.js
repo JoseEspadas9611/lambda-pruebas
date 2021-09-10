@@ -42,7 +42,7 @@ exports.handler = async function (event, context) {
             if(true){
                 let body = { 
                 error_code:0,
-                msg: data}; 
+                msg: data.modifiedCount}; 
                 return {
                 statusCode: 200,
                 headers,
