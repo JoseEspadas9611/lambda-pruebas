@@ -1,0 +1,21 @@
+{
+  "name": "lambdas-test-class",
+  "version": "1.0.0",
+  "description": "Clase de como usar lambdas",
+  "main": "index.js",
+  "scripts": {
+    "lambda-serve": "netlify-lambda serve functions"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.9",
+    "mongodb-client-encryption": "^1.2.5",
+    "netlify-lambda": "^2.0.3",
+    "node-fetch": "^2.6.1",
+    "qrcode": "^1.4.4",
+    "saslprep": "^1.0.3"
+  }
+}
