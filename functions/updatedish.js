@@ -38,10 +38,11 @@ exports.handler = async function (event, context) {
       if(typeof business_id == "string"){
         if (typeof product_id == "number"){
             const data = await getData(business_id,product_id,product_fields);
-            if(data.modifiedCount == 1){
+            //console.log(data);
+            if(true){
                 let body = { 
                 error_code:0,
-                msg: 'Los datos se modificaron correctamente'}; 
+                msg: data}; 
                 return {
                 statusCode: 200,
                 headers,
