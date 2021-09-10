@@ -39,7 +39,8 @@ exports.handler = async function (event, context) {
         if (typeof product_id == "number"){
             const data = await getData(business_id,product_id,product_fields);
             //console.log(data);
-            if(data.modifiedCount){
+            const { modifiedCount } = data;
+            if(modifiedCount){
                 let body = { 
                 error_code:0,
                 msg: 'Los datos se modificaron correctamente'}; 
