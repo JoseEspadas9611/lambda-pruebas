@@ -18,7 +18,7 @@ const getData = async (business_id,product_id,product_fields) => {
     await client.connect();
     d = new Date()
     product_fields.ingredients = product_fields.ingredients.length == 0 ? [] :product_fields.ingredients.map(ingredient => ({id: Math.floor(Math.random() * 999) , name:ingredient.name}))
-    product_fields.extras = product_fields.extras.length == 0 ? [] :product_fields.extras.map(extra =>({id: Math.floor(Math.random() * 999), name:extra.name}))
+    product_fields.extras = product_fields.extras.length == 0 ? [] :product_fields.extras.map(extra =>({id: Math.floor(Math.random() * 999), name:extra.name, price: parseInt(extra.price)}))
     const results = await client
       .db("MenusDigitalesProductos")
       .collection(business_id)
@@ -61,8 +61,8 @@ exports.handler = async function (event, context) {
             }
         }else{
             let body = { 
-                error_code:1,
-                msg: 'El category_id debe ser un number'}; 
+                error_code:2,
+                msg: 'El product_id debe ser un number'}; 
               return {
                 statusCode: 400,
                 headers,
